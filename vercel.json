@@ -3,11 +3,11 @@
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/static"
+      "use": "@vercel/static-build"
     }
   ],
   "routes": [
     { "handle": "filesystem" },
-    { "src": "/[^.]+", "dest": "/" }
+    { "src": "/.*", "dest": "/index.html" }
   ]
 }
