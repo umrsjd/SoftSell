@@ -1,0 +1,117 @@
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Light Mode Styles */
+body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.bg-secondary {
+  background-color: #f0f0f0;
+}
+
+.text-white {
+  color: #000000;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode .bg-secondary {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .text-white {
+  color: #ffffff;
+}
+
+body.dark-mode .bg-secondary-40 { /* Changed from /40 to -40 */
+  background-color: rgba(30, 30, 30, 0.4);
+}
+
+/* Additional Styles for Transition */
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+.chat-widget {
+  width: 300px;
+  max-height: 400px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.message.user {
+  background-color: #646cff;
+  padding: 8px;
+  border-radius: 8px;
+  align-self: flex-start;
+}
+
+.message.bot {
+  background-color: #1a1a1a;
+  padding: 8px;
+  border-radius: 8px;
+  align-self: flex-end;
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

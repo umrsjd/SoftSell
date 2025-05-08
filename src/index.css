@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800&family=Bungee&family=Luckiest+Guy&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #1E1E1E;
+  color: #ffffff;
+}
+
+@layer components {
+  .section-container {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+    .section-container {
+      text-align: left; /* Align text to the left */
+      margin-left: 0; /* Remove any left margin */
+      padding-left: 0; /* Remove any left padding */
+    }
+  }
+  
+  .glassmorphism-card {
+    @apply bg-secondary/40 backdrop-blur-md rounded-xl p-6 border border-accent/20 shadow-lg transform transition-all duration-300 hover:shadow-neon;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+  
+
+  .shadow-glow {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+  }
+  
+  .btn-primary {
+    @apply bg-black hover:bg-black text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 border border-white;
+  }
+  
+  .input-field {
+    @apply bg-secondary/50 border border-white rounded-lg py-3 px-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent;
+  }
+}
+
+/* Tilted card effect */
+.glassmorphism-card {
+  transition: transform 0.3s ease;
+}
+
+.glassmorphism-card:hover {
+  transform: perspective(1000px) rotateX(-5deg) rotateY(5deg);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+}
+
+.dark-mode .bg-secondary {
+  background-color: #ffffff !important;
+}
+
+.dark-mode .bg-secondary\/40 {
+  background-color: rgba(26, 26, 26, 0.4) !important;
+}
+
+.dark-mode .text-gray-200 {
+  color: #e5e5e5 !important;
+}
+
+.dark-mode .text-gray-400 {
+  color: #9ca3af !important;
+}
+
+.dark-mode .border-white\/20 {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.dark-mode .input-field {
+  background-color: #2d2d2d !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.dark-mode .btn-primary {
+  background-color: #2d2d2d !important;
+  color: #ffffff !important;
+}
+
+.dark-mode .hover\:bg-white:hover {
+  background-color: #2d2d2d !important;
+}
